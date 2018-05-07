@@ -1,0 +1,105 @@
+.component {
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 40px;
+	max-width: 100%;
+}
+.component-fullwidth {
+	margin-bottom: 0;
+	background: #333;
+}
+.component>ul,
+.component>div {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	
+}
+.component-fullwidth>ul {
+	overflow: hidden;
+	padding: 21.9%; /* 配合圖片尺寸大小做調整 */
+}
+.component li,
+.component>div>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	opacity: 0;
+	z-index: 99;
+	overflow: hidden;
+	background: #0E0E0E;
+}
+.component-fullwidth li {
+	overflow: hidden;
+	width: 100%;
+}
+.component .current {
+	opacity: 1;
+	pointer-events: auto;
+	z-index: 100;
+}
+.component li img .component>div>div img {
+	display: block;
+}
+.component-fullwidth li img {
+	width: 100%;
+}
+.component nav a {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	color: #E2E2E2;
+	outline: none;
+	overflow: hidden;
+	text-align: center;
+	line-height: 200px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.carousel-control{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+.component-fullwidth nav a.prev {
+	left: 3%;
+}
+.component-fullwidth nav a.next {
+	right: 3%;
+}
+.component nav a::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	line-height: 60px;
+	height: 100%;
+	font-family: 'fontawesome';
+	font-size: 60px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	opacity: 0.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.component nav a:hover::before {
+	opacity: 1;
+}
+a.prev::before {
+	content: "\f104";
+}
+a.next::before {
+	content: "\f105";
+}
+.hidden {
+    display: none;
+}

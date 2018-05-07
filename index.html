@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- slides -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/fxfullwidth.css" />
+    <!-- slides end -->
+    <title>ItemTransitions</title>
+</head>
+<body>
+    <section id='itemtransitions_1'>
+        <div class="component component-fullwidth">
+            <ul class="itemwrap">
+                <li class="current">
+                    <img src="images/BannerDemo.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/BannerDemo2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/BannerDemo3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/BannerDemo4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/BannerDemo7.jpg" alt="">
+                </li>
+            </ul>
+            <nav class="carousel-control">
+                <a class="prev" href="#"></a>
+                <a class="next" href="#"></a>
+            </nav>
+        </div>
+    </section>
+    <select name="fxselect" class="hidden" id="animation_select">
+        <option value=""></option>
+    </select>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.itemtransitions.js"></script>
+    <script>
+        $('#itemtransitions_1').itemtransitions({
+            animation: 'fxSoftScale',
+            selectName: 'fxselect',
+        });
+        $('.carousel-control').on('click', function (e) {
+            var animations = ['fxSoftScale', 'fxPressAway', 'fxSideSwing', 'fxFortuneWheel', 'fxPushReveal', 'fxSnapIn', 'fxLetMeIn', 'fxStickIt', 'fxArchiveMe', 'fxVGrowth', 'fxSlideBehind', 'fxSoftPulse', 'fxEarthquake', 'fxCliffDiving'];
+            var animationRand = Math.floor(Math.random() * animations.length);
+            var animationResult = animations[animationRand];
+            $('#animation_select > option').attr('value', animationResult);
+        });
+        setInterval(
+            function () {
+                $('nav > .next').click();
+            }, 5000);
+    </script>
+</body>
+</html>
