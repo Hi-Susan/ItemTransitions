@@ -1,4 +1,5 @@
 ## Item Transition Inspiration with jQuery (RWD)
+![ItemTransitions](images/ItemTransitions-RWD.jpeg)
 ### 響應式多種輪播轉場動畫效果
 因為工作需要，最近在研究各種的slideshow，意外找到[Mary Lou](https://tympanus.net/codrops/author/crnacura/)的作品 [Inspiration for item transitions](https://tympanus.net/codrops/2014/03/18/inspiration-for-item-transitions/)。她使用 CSS Animations製作出各種轉場動畫。效果真的不錯，可是在運用上卻不好套使。
 
@@ -217,5 +218,4 @@ ___
 #### 自動輪播
 自動輪播就簡單拉，運用setInterval，設定週期時間，讓他自動點擊next按鈕
 
-[實際演示效果](https://hi-susan.github.io/ItemTransitions/)
-
+[實際演示效果](https://hi-susan.github.io/ItemTransitions-RWD/)
